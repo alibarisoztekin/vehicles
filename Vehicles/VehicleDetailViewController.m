@@ -55,8 +55,12 @@
 {
     // Update the user interface for the detail item.
     if (self.detailVehicle) {
-        //TODO: Fill this in.
-    }
+        //Set the View Controller title, which will display in the Navigation bar.
+        self.title = [self.detailVehicle vehicleTitleString];
+        
+        //Setup the basic details string based on the properties in the base Vehicle class.
+          self.vehicleDetailsLabel.text = [self.detailVehicle vehicleDetailsString];
+      }
 }
 
 #pragma mark - IBActions
